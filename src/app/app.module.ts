@@ -26,6 +26,17 @@ import { IsudsComponent } from './isuds/isuds.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FAQComponent } from './faq/faq.component';
 import { OneMoreThingComponent } from './one-more-thing/one-more-thing.component';
+
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +60,15 @@ import { OneMoreThingComponent } from './one-more-thing/one-more-thing.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PerfectScrollbarModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
