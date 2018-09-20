@@ -3,7 +3,10 @@
 
 @media (max-width: 575.98px) {
     #text {
-        font-size: 22px;
+        font-size: 16px;
+    }
+    #sub-text {
+        font-size: 16px;        
     }
 }
 
@@ -11,11 +14,17 @@
     #text {
         font-size: 26px;
     }
+    #sub-text {
+        font-size: 16px;        
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     #text {
         font-size: 32px;
+    }
+    #sub-text {
+        font-size: 16px;        
     }
 }
 
@@ -23,11 +32,17 @@
     #text {
         font-size: 36px;
     }
+    #sub-text {
+        font-size: 16px;        
+    }
 }
 
 @media (min-width: 1200px) {
     #text {
         font-size: 42px;
+    }
+    #sub-text {
+        font-size: 16px;        
     }
 }
 
@@ -53,12 +68,12 @@ html, body {
     background-image: url("../../assets/img/product.jpg");
     position: absolute;
     display: block;
-    width: 100vw;
-    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.5);
     z-index: -1;    
 }
@@ -104,9 +119,6 @@ html, body {
     text-align: right;
 }
 
-.image-sec {
-    width: 460px;
-}
 
 .text-sec {
     top: 54%;
