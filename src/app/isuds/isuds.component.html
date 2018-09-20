@@ -1,2 +1,121 @@
 <app-top></app-top>
-<p>i work!</p>
+<div @fade [perfectScrollbar]="config" class="ps" style="position: relative; max-width: 100vw; max-height: 100vh;">
+  <header>
+    <div id="overlay">
+      <div id="sub-text">Our self-pour technology consists of software, touchscreens and electronic components that
+        support a seamless customer experience.</div>
+    </div>
+    <div id="img"></div>
+  </header>
+
+  <body>
+    <section id="sec-1">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-sm-12 col-lg-9 text-sec justify-content-center align-self-center mx-auto">
+            <div class="row pt-3 pb-3">
+              <div class="col-12 sec-title">
+                Touchscreen
+              </div>
+              <div class="col-12">
+                The touchscreen, which displays information about the brewer, the alcohol percentage and the price per
+                ounce, is typically installed above the tap
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <img class="image-sec img-fluid" src="../../assets/img/touchscreen.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-2">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-sm-12 col-lg-3">
+            <img class="image-sec img-fluid" src="../../assets/img/rfid.png" alt="">
+          </div>
+          <div class="col-sm-12 col-lg-9 text-sec justify-content-center align-self-center mx-auto">
+            <div class="row pt-3 pb-3">
+              <div class="col-12 sec-title">
+                Radio frecuency card
+              </div>
+              <div class="col-12">
+                With the iSuds system, after ID verification, the customers receive an RFID card to control the beer
+                tap
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-3">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-sm-12 col-lg-9 text-sec justify-content-center align-self-center mx-auto">
+            <div class="row pt-3 pb-3">
+              <div class="col-12 sec-title">
+                Pour it
+              </div>
+              <div class="col-12">
+                Once they have poured a total of 32 ounces, the taps will no longer serve them. They must check with an
+                employee to reactivate their card
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <img class="image-sec img-fluid" src="../../assets/img/beer.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-4">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-sm-12 col-lg-3">
+            <img class="image-sec img-fluid" src="../../assets/img/credit-card.png" alt="">
+          </div>
+          <div class="col-sm-12 col-lg-9 text-sec justify-content-center align-self-center mx-auto">
+            <div class="row pt-3 pb-3">
+              <div class="col-12 sec-title">
+                Payment
+              </div>
+              <div class="col-12">
+                When they check out, their credit card is automatically charged
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-5">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-sm-12 col-lg-9 text-sec justify-content-center align-self-center mx-auto">
+            <div class="row pt-3 pb-3">
+              <div class="col-12 sec-title">
+                Cheers
+              </div>
+              <div class="col-12">
+                  It’s a simple streamlined experience for both the customer and the business
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <img class="image-sec img-fluid" src="../../assets/img/cheers.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </body>
+
+  <footer>
+    <app-bottom></app-bottom>
+  </footer>
+</div>

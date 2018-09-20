@@ -6,12 +6,14 @@ import { WhyisudsComponent } from './whyisuds/whyisuds.component';
 import { SuccessstoryComponent } from './successstory/successstory.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TestdisplayComponent } from './testdisplay/testdisplay.component';
+import { IsudsComponent } from './isuds/isuds.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'home', component:HomeComponent},
   {path:'product', component: ProductComponent},
   {path:'whyisuds', component: WhyisudsComponent},
+  {path:'isuds', component: IsudsComponent},
   {path:'successstory', component: SuccessstoryComponent},
   {path:'contact', component: ContactusComponent},
   {path:'test', component:TestdisplayComponent},

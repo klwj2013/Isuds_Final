@@ -1,42 +1,46 @@
 <!--Navigation -->
 <!-- <div class="navbar-wrapper"> -->
-  <!-- <div class="container-fluid"> -->
-        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">
-              <img id="logo" src="../../assets/img/isuds logo.png" alt="">
-            </a>
-              <!-- <img src="assets/img/favicon.png"> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="true" aria-label="Toggle navigation"></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <ng-container *ngFor="let item of routes">
-                      <ng-container *ngTemplateOutlet="firstLevel; context:{$implicit: item}"></ng-container>
-                      <li class="nav-item dropdown" *ngIf="item.children.length >0" else firstLevel>
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{item.linkName}}</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                         <ng-container *ngTemplateOutlet="dropdownList; context:{$implicit: item.children}"></ng-container>
-                          <ng-template #dropdownList let-items>
-                            <a class="dropdown-item" *ngFor="let item of items" [routerLink]="item.url">{{item.linkName}}</a>
-                          </ng-template>
-                        </div>
-                      </li>
-                      <ng-template #firstLevel let-item>
-                        <li class="nav-item" *ngIf="item.children.length ==0"> 
-                          <a class="nav-link" [routerLink]="item.url">{{item.linkName}}</a>
-                      </li>
-                      </ng-template>
-                    </ng-container>      
-                  </ul>
-                  <!--
-                  <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                -->
+<!-- <div class="container-fluid"> -->
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">
+    <img id="logo" src="../../assets/img/isuds logo.png" alt="">
+  </a>
+  <!-- <img src="assets/img/favicon.png"> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+    aria-expanded="true" aria-label="Toggle navigation"></button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ng-container *ngFor="let item of routes">
+        <ng-container *ngTemplateOutlet="firstLevel; context:{$implicit: item}"></ng-container>
+        <li class="nav-item dropdown" *ngIf="item.children.length > 0" else firstLevel>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            {{item.linkName}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <ng-container *ngTemplateOutlet="dropdownList; context:{$implicit: item.children}"></ng-container>
+            <ng-template #dropdownList let-items>
+              <a class="dropdown-item" *ngFor="let item of items" [routerLink]="item.url">
+                {{item.linkName}}
+              </a>
+            </ng-template>
+          </div>
+        </li>
+        <ng-template #firstLevel let-item>
+          <li class="nav-item" *ngIf="item.children.length == 0">
+            <a class="nav-link" [routerLink]="item.url">{{item.linkName}}</a>
+          </li>
+        </ng-template>
+      </ng-container>
+    </ul>
+    <!--
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+  </div>
+</nav>
 
-                </div>
-              </nav>
-        
 <!-- </div> /container -->
 <!-- </div> /navbar wrapper -->
