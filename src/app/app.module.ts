@@ -29,6 +29,9 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -57,6 +60,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppRoutingModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     PerfectScrollbarModule
   ],
   providers: [

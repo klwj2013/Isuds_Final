@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top',
@@ -8,6 +11,28 @@ import { Component, OnInit } from '@angular/core';
 export class TopComponent implements OnInit {
   routes: any[];
   constructor() { }
+
+  myControl = new FormControl();
+  options: string[] = [
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three',
+    'One', 'Two', 'Three'
+  ];
+  filteredOptions: Observable<string[]>;
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
 
   ngOnInit() {
     this.routes = [
@@ -23,6 +48,12 @@ export class TopComponent implements OnInit {
       },
       { linkName: 'Success Stories', url: '/successstory', children: [] },
       { linkName: 'Contact Us', url: '/contact', children: [] }
-    ]
+    ];
+
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
   }
 }
