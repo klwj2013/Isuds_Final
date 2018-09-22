@@ -13,24 +13,21 @@ import { WhyisudsComponent } from './whyisuds/whyisuds.component';
 import { SuccessstoryComponent } from './successstory/successstory.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TestdisplayComponent } from './testdisplay/testdisplay.component';
-//import { DateComponent } from './date/date.component';
-
-
-
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-//import { Date1Component } from './date1/date1.component';
+
 import { AddressCardComponent } from './address-card/address-card.component';
 import { IsudsComponent } from './isuds/isuds.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FAQComponent } from './faq/faq.component';
 import { OneMoreThingComponent } from './one-more-thing/one-more-thing.component';
 
-
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -49,8 +46,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SuccessstoryComponent,
     ContactusComponent,
     TestdisplayComponent,
-    //DateComponent,
-    //Date1Component,
     AddressCardComponent,
     IsudsComponent,
     PricingComponent,
@@ -61,6 +56,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NoopAnimationsModule,
     PerfectScrollbarModule
   ],
   providers: [
