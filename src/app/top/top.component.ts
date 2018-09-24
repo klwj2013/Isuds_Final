@@ -14,18 +14,7 @@ export class TopComponent implements OnInit {
 
   myControl = new FormControl();
   options: string[] = [
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three',
-    'One', 'Two', 'Three'
+    'Why us?', 'How much it cost?', 'Gallery', 'Example with "H"'
   ];
   filteredOptions: Observable<string[]>;
 

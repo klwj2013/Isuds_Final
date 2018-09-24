@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 575.98px) {
+    #text {
+        font-size: 16px;
+    }
+    #sub-text {
+        font-size: 16px;        
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #text {
+        font-size: 26px;
+    }
+    #sub-text {
+        font-size: 16px;        
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #text {
+        font-size: 32px;
+    }
+    #sub-text {
+        font-size: 16px;        
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #text {
+        font-size: 36px;
+    }
+    #sub-text {
+        font-size: 16px;        
+    }
+}
+
+@media (min-width: 1200px) {
+    #text {
+        font-size: 42px;
+    }
+    #sub-text {
+        font-size: 16px;        
+    }
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+#overlay {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 64vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+#img {
+    background-image: url("../../assets/img/contact.jpg");
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 64vh;
+    z-index: -1;    
+}
+
+#text {
+    font-weight: bold;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+#sub-text {
+    font-family: 'Marck Script', cursive;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    font-size: 22px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+#sec-1 {
+    margin-top: 64vh;
+    height: 78vh;;
+    display: block;
+    background-color: rgb(226, 129, 49);
+    color: whitesmoke;
+    text-align: right;
+}
+
+#contact-title {
+    font-weight: 200;
+    color: black;
+    font-size: 2.5em;
+}

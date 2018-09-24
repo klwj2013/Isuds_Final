@@ -11,8 +11,8 @@
 }
 
 .navbar {
-  padding: 0 16px 0 16px;
-  background-color: rgba(255, 255, 255, .9) !important;
+  padding: 4px 16px 4px 16px;
+  background-color: rgba(240, 240, 240, .8) !important;
 }
 
 #logo {

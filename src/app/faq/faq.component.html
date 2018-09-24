@@ -1,2 +1,27 @@
 <app-top></app-top>
-<p>faq works!</p>
+<div id="banner">
+    <div class="d-flex justify-content-center pad-top">
+        <h1>Frequently Asked </h1>
+        <h1 class="text-warning">&ensp;Questions</h1>
+    </div>
+</div>
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-12">
+            <mat-accordion>
+                <mat-expansion-panel *ngFor="let item of questionAnswerList">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            {{item.question}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>{{item.answer}}</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <app-bottom></app-bottom>
+</footer>

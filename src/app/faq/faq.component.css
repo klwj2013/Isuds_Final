@@ -1,0 +1,11 @@
+#banner {
+    height: 360px;
+    background-color: black;
+}
+
+.pad-top {
+    padding-top: 160px;
+    color: white;
+    font-size: 64px;
+    font-weight: 400;
+}
