@@ -17,7 +17,7 @@ export class ContactusComponent implements OnInit {
   foods: Food[] = [
     {value: 'info', viewValue: 'Request information'},
     {value: 'demo', viewValue: 'Request a demo'},
-    {value: 'contact', viewValue: 'Contact me'},
+    {value: 'contact', viewValue: 'Contact us'},
   ];
 
   public selected2 = this.foods[0];
