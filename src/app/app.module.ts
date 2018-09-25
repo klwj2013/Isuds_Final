@@ -1,6 +1,7 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,6 @@ import { SuccessstoryComponent } from './successstory/successstory.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { TestdisplayComponent } from './testdisplay/testdisplay.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AddressCardComponent } from './address-card/address-card.component';
@@ -33,6 +33,11 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
+
+
+
+
+import { ToastrModule } from 'ngx-toastr';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -59,16 +64,18 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule,
     ReactiveFormsModule,
     PerfectScrollbarModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {

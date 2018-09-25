@@ -1,10 +1,9 @@
 import { fade } from './../animations';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
-export interface Food {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-contactus',
@@ -14,17 +13,32 @@ export interface Food {
 })
 export class ContactusComponent implements OnInit {
 
-  foods: Food[] = [
-    {value: 'info', viewValue: 'Request information'},
-    {value: 'demo', viewValue: 'Request a demo'},
-    {value: 'contact', viewValue: 'Contact us'},
+  options: string[] = [
+    'Request information',
+    'Request a demo',
+    'Contact us'
   ];
 
-  public selected2 = this.foods[0];
+  selectedOption: string = this.options[0];
 
-  constructor() { }
+  constructor(private http: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit() {
   }
 
+  onSubmit(form: NgForm) {
+    const headers = new HttpHeaders()
+      .set('Authorization', 'my-auth-token')
+      .set('Content-Type', 'application/json');
+    this.http.post('http://127.0.0.1:3000/send', JSON.stringify(form.value), {
+      headers: headers
+    }).subscribe();
+    form.reset();
+    this.toastr.success('Message has been sent');
+  }
+
+  changeOption(event) {
+    this.selectedOption = event.value;
+    console.log(event.value);
+  }
 }
