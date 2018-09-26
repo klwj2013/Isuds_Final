@@ -14,7 +14,7 @@
                 <h2 class="d-flex justify-content-center" id="contact-title">Get in touch with us</h2>
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-8 col-md-offset-2">
-                        <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+                        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
                             <div class="form-group">
                                 <mat-form-field id="select">
                                     <mat-select [(value)]="selectedOption" #select (selectionChange)="changeOption($event)">
@@ -31,6 +31,14 @@
                             <div class="form-group">
                                 <label for="_email">Email</label>
                                 <input type="email" class="form-control" id="_email" name="email" ngModel>
+                            </div>
+                            <div class="form-group">
+                                <label for="_phone">Phone Number</label>
+                                <input type="text" class="form-control" id="_phone" name="phone" ngModel>
+                            </div>
+                            <div class="form-group">
+                                <label for="_state">State</label>
+                                <input type="text" class="form-control" id="_state" name="state" ngModel>
                             </div>
                             <div class="form-group ">
                                 <label for="_message">Your Message</label>

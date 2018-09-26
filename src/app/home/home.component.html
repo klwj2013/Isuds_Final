@@ -1,5 +1,7 @@
 <app-top></app-top>
-<app-imgslider></app-imgslider>
-<!--<app-date></app-date> -->
-<!--<app-address-card></app-address-card>-->
-
+<div @fade [perfectScrollbar]="config" class="ps" style="position: relative; max-width: 100vw; max-height: 100vh;">
+    <app-imgslider></app-imgslider>
+    <footer>
+        <app-bottom></app-bottom>
+    </footer>
+</div>

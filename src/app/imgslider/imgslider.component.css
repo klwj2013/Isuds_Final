@@ -3,8 +3,8 @@
 
 /* Carousel base class */
 .carousel {
-    margin-bottom: 60px;
-  }
+    bottom: 0;
+}
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
     z-index: 1;
