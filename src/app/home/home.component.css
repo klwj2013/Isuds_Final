@@ -44,15 +44,15 @@
 }
 
 #bg-1 {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(226, 129, 49);
 }
 
 #bg-2 {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(232, 142, 49);
 }
 
 .title {
-    color: rgb(226, 129, 49);
+    color: black;
 }
 .sub-title {
     color: whitesmoke;

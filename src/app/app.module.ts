@@ -38,6 +38,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 
 import { ToastrModule } from 'ngx-toastr';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -76,7 +77,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatExpansionModule,
     HttpClientModule,
     MatTabsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularFontAwesomeModule
   ],
   providers: [
     {
