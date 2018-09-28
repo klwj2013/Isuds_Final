@@ -1,3 +1,4 @@
+import { OneMoreThingComponent } from './one-more-thing/one-more-thing.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FAQComponent } from './faq/faq.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'isuds', component: IsudsComponent },
   { path: 'faq', component: FAQComponent },
   { path: 'pricing', component: PricingComponent },
+  { path: 'one-more-thing', component: OneMoreThingComponent },
   { path: 'successstory', component: SuccessstoryComponent },
   { path: 'contact', component: ContactusComponent },
   { path: 'test', component: TestdisplayComponent },

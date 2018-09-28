@@ -1,2 +1,55 @@
 <app-top></app-top>
-<p>omt work!</p>
+<div @fade [perfectScrollbar]="config" class="ps" style="position: relative; max-width: 100vw; max-height: 100vh;">
+    <header>
+        <div id="overlay">
+            <h1 id="text">One more thing</h1>
+        </div>
+        <div id="img" class="img-fluid"></div>
+    </header>
+
+    <body>
+        <section id="sec-1">
+            <div class="container pt-5 pb-5">
+                <div class="row">
+                    <div class="row pt-3 pb-3">
+                        <div class="col-sm-12 col-md-9">
+                            <h5 class="text-right">
+                                With no waste, less overhead and customer engagement, what more could you need?
+                                We took self-pour technology to the next level with integrated advertising
+                                capabilities. The upper portion of the tablet has a function available to advertise and
+                                direct market to your customers.You can promote your products and events or even sell
+                                advertising space for additional revenue.
+                            </h5>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-center">
+                            <img src="../../assets/img/happy.svg" alt="news" height="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-2">
+            <div class="container pt-5 pb-5">
+                <div class="row">
+                    <div class="row pt-3 pb-3">
+                        <div class="col-sm-12 col-md-3 text-center">
+                            <img src="../../assets/img/gear.svg" alt="comment" height="120">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <h5 class="text-left">
+                                The best part is, iSuds is completely customizable.
+                                We make tech support and integration assistance readily available.
+                                Let iSuds help you take your business to the next level!
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <footer>
+        <app-bottom></app-bottom>
+    </footer>
+</div>
