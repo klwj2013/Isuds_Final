@@ -48,35 +48,33 @@
 </div>
 -->
 
-<!--
-  <mat-toolbar class="navbar-wrapper">
-    <mat-toolbar-row class="container-fluid">
-      <img id="logo" src="../../assets/img/isuds logo.png" alt="">
-      <button mat-button>Home</button>
-      <button mat-button>The Product</button>
-      <button mat-button [matMenuTriggerFor]="expandible">Why iSuds</button>
-      <button mat-button>Sucess Stories</button>
-      <button mat-button>Contact Us</button>
-    </mat-toolbar-row>
-  </mat-toolbar>
--->
-
-
 <mat-toolbar class="navbar-wrapper" id="desktop-navbar">
   <mat-toolbar-row class="container-fluid">
     <img id="logo" src="../../assets/img/isuds logo.png" alt="">
     <div *ngFor="let item of routes">
       <div *ngIf="item.children.length === 0 else dropdown">
-        <button mat-button [routerLink]="item.url">{{item.linkName}}</button>
+        <button class="btn btn-light" [routerLinkActive]="['clicked']" mat-button [routerLink]="item.url">{{item.linkName}}</button>
+
       </div>
       <ng-template #dropdown>
         <button mat-button [matMenuTriggerFor]="expandible">{{item.linkName}}</button>
         <mat-menu #expandible="matMenu">
           <div *ngFor="let children of item.children">
-            <button mat-menu-item [routerLink]="children.url">{{children.linkName}}</button>
+            <button mat-menu-item [routerLinkActive]="['clicked']" [routerLink]="children.url">{{children.linkName}}</button>
           </div>
         </mat-menu>
       </ng-template>
     </div>
+    <form class="right">
+      <mat-form-field>
+        <input type="text" placeholder="Search" aria-label="Search" matInput [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+            <a [routerLink]="option.link">{{option.name}}</a>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
   </mat-toolbar-row>
 </mat-toolbar>

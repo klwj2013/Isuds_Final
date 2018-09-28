@@ -1,77 +1,76 @@
 @media (max-width: 575.98px) {
     .sidenav {
-      display: block;
+        display: block;
     }
     #btn-menu {
         display: block;
     }
-  }
-  
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    .sidenav {
-      display: block;
-    }
-    #btn-menu {
-        display: block;
-    }
-  }
-  
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .sidenav {
-      display: block;
-    }
-    #btn-menu {
-        display: block;
-    }
-  }
-  
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    .sidenav {
-      display: contents;
-    }
-    #btn-menu {
-        display: none;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .sidenav {
-      display: contents;
-    }
-    #btn-menu {
-        display: none;
-    }
-  }
+}
 
-  #btn-menu {
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .sidenav {
+        display: block;
+    }
+    #btn-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sidenav {
+        display: block;
+    }
+    #btn-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .sidenav {
+        display: contents;
+    }
+    #btn-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidenav {
+        display: contents;
+    }
+    #btn-menu {
+        display: none;
+    }
+}
+
+#btn-menu {
     position: absolute;
     top: 0;
     z-index: 3;
     display: block;
-  }
-  .btn-menu-item {
-      background-color: white;
-  }
-  .btn-menu-item:focus, .btn-menu-item:active, .btn-menu-item:active:focus {
-    outline: none;
-    box-shadow: none;
 }
 
-  .example-container {
+.btn-menu-item:focus, .btn-menu-item:active, .btn-menu-item:active:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+}
+
+.example-container {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-  }
+}
 
-  .block {
-      display: block;
-  }
+.block {
+    display: block;
+}
 
-  button:focus {
-      outline: none;
-  }
+button:focus {
+    outline: none;
+}
 .clicked {
     color: orange;
 }

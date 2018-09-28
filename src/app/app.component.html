@@ -5,13 +5,13 @@
                 <img id="logo" src="../../assets/img/isuds logo.png" height="100" alt="logo" class="mt-3 mb-4">
                 <div *ngFor="let item of routes">
                     <div *ngIf="item.children.length === 0 else dropdown">
-                        <input type="button" class="btn btn-menu-item" mat-button [routerLink]="item.url" name="clicked" (click)="select($event)" value="{{item.linkName}}">
+                        <button class="btn-menu-item" [routerLinkActive]="['clicked']" mat-button [routerLink]="item.url" (click)="close()">{{item.linkName}}</button>
                     </div>
                     <ng-template #dropdown>
-                        <input type="button" class="btn btn-menu-item" mat-button [matMenuTriggerFor]="expandible" name="clicked" #btnDropDown value="{{item.linkName}}">
+                        <button class="btn-menu-item" mat-button [matMenuTriggerFor]="expandible">{{item.linkName}}</button>
                         <mat-menu #expandible="matMenu">
                             <div *ngFor="let children of item.children">
-                                <button mat-menu-item [routerLink]="children.url" (click)="selectDropDown(btnDropDown)">{{children.linkName}}</button>
+                                <button mat-menu-item [routerLinkActive]="['clicked']" [routerLink]="children.url" (click)="close()">{{children.linkName}}</button>
                             </div>
                         </mat-menu>
                     </ng-template>

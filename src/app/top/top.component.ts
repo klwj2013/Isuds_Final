@@ -22,7 +22,7 @@ export class TopComponent implements OnInit {
   options: Option[] = [
     { name: 'Why us?', link: '/isuds' },
     { name: 'How much it cost?', link: '/pricing' },
-    { name: 'Some questions', link: '/faq' }
+    { name: 'Questions/Answers', link: '/faq' }
   ];
   filteredOptions: Observable<Option[]>;
 

@@ -31,36 +31,6 @@ export class AppComponent implements OnInit {
     ];
   }
 
-
-  toogleClass() {
-    var elements = (<HTMLInputElement[]><any>document.getElementsByName("clicked"));
-    for (let i = 0; i < elements.length; i++) {
-      let classList = elements[i].classList;
-      let classes = elements[i].className;
-      classes.includes('clicked') ? classList.remove('clicked') : classList.remove('clicked');
-    }
-  }
-  changeClass(e) {
-    this.toogleClass();
-    let classList = e.target.classList;
-    let classes = e.target.className;
-    classes.includes('clicked') ? classList.remove('clicked') : classList.add('clicked');
-
-  }
-
-  select(e) {
-    this.close();
-    this.changeClass(e);
-  }
-
-  selectDropDown(e) {
-    this.close();
-    this.toogleClass();
-    let classList = e.classList;
-    let classes = e.className;
-    classes.includes('clicked') ? classList.remove('clicked') : classList.add('clicked');
-  }
-
   close() {
     this.sidenav.close();
   }
