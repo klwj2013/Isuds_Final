@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   animations: [fade]
 })
 export class HomeComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
