@@ -1,3 +1,30 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container class="example-container" (backdropClick)="close()" class="sidenav">
+    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+        <mat-toolbar class="navbar-wrapper" id="desktop-navbar">
+            <mat-toolbar-row class="container-fluid" class="block">
+                <img id="logo" src="../../assets/img/isuds logo.png" height="100" alt="logo" class="mt-3 mb-4">
+                <div *ngFor="let item of routes">
+                    <div *ngIf="item.children.length === 0 else dropdown">
+                        <input type="button" class="btn btn-menu-item" mat-button [routerLink]="item.url" name="clicked" (click)="select($event)" value="{{item.linkName}}">
+                    </div>
+                    <ng-template #dropdown>
+                        <input type="button" class="btn btn-menu-item" mat-button [matMenuTriggerFor]="expandible" name="clicked" #btnDropDown value="{{item.linkName}}">
+                        <mat-menu #expandible="matMenu">
+                            <div *ngFor="let children of item.children">
+                                <button mat-menu-item [routerLink]="children.url" (click)="selectDropDown(btnDropDown)">{{children.linkName}}</button>
+                            </div>
+                        </mat-menu>
+                    </ng-template>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </mat-sidenav>
 
-<router-outlet></router-outlet>
+    <mat-sidenav-content class="sidenav">
+        <button mat-button (click)="sidenav.open()" class="btn btn-light" id="btn-menu">
+            <fa name="bars"></fa> <i> Menu</i>
+        </button>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

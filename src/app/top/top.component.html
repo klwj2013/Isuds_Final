@@ -1,9 +1,8 @@
-<!--Navigation -->
+<!--
 <div class="navbar-wrapper">
   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">
       <img id="logo" src="../../assets/img/isuds logo.png" alt="">
-      <!--<img id="logo" src="assets/img/favicon.png">-->
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
       aria-expanded="true" aria-label="Toggle navigation"></button>
@@ -32,13 +31,6 @@
           </ng-template>
         </ng-container>
       </ul>
-      <!--
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    -->
-
       <form>
         <mat-form-field>
           <input type="text" placeholder="Search" aria-label="Search" matInput [formControl]="myControl"
@@ -54,3 +46,37 @@
     </div>
   </nav>
 </div>
+-->
+
+<!--
+  <mat-toolbar class="navbar-wrapper">
+    <mat-toolbar-row class="container-fluid">
+      <img id="logo" src="../../assets/img/isuds logo.png" alt="">
+      <button mat-button>Home</button>
+      <button mat-button>The Product</button>
+      <button mat-button [matMenuTriggerFor]="expandible">Why iSuds</button>
+      <button mat-button>Sucess Stories</button>
+      <button mat-button>Contact Us</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+-->
+
+
+<mat-toolbar class="navbar-wrapper" id="desktop-navbar">
+  <mat-toolbar-row class="container-fluid">
+    <img id="logo" src="../../assets/img/isuds logo.png" alt="">
+    <div *ngFor="let item of routes">
+      <div *ngIf="item.children.length === 0 else dropdown">
+        <button mat-button [routerLink]="item.url">{{item.linkName}}</button>
+      </div>
+      <ng-template #dropdown>
+        <button mat-button [matMenuTriggerFor]="expandible">{{item.linkName}}</button>
+        <mat-menu #expandible="matMenu">
+          <div *ngFor="let children of item.children">
+            <button mat-menu-item [routerLink]="children.url">{{children.linkName}}</button>
+          </div>
+        </mat-menu>
+      </ng-template>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

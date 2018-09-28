@@ -20,8 +20,8 @@ export class TopComponent implements OnInit {
 
   myControl = new FormControl();
   options: Option[] = [
-    { name: 'Why us?', link: '/isuds' }, 
-    { name: 'How much it cost?', link: '/pricing' }, 
+    { name: 'Why us?', link: '/isuds' },
+    { name: 'How much it cost?', link: '/pricing' },
     { name: 'Some questions', link: '/faq' }
   ];
   filteredOptions: Observable<Option[]>;

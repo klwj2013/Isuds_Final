@@ -34,7 +34,10 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 import { ToastrModule } from 'ngx-toastr';
@@ -77,6 +80,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatExpansionModule,
     HttpClientModule,
     MatTabsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatSidenavModule,
     ToastrModule.forRoot(),
     AngularFontAwesomeModule
   ],
