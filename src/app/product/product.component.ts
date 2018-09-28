@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   animations: [fade]
 })
 export class ProductComponent implements OnInit {
-  bounce: any;
 
   constructor() { }
 

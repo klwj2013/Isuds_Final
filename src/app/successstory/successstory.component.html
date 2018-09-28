@@ -1,4 +1,61 @@
 <app-top></app-top>
-<p>
-  successstory works!
-</p>
+<div @fade [perfectScrollbar]="config" class="ps" style="position: relative; max-width: 100vw; max-height: 100vh;">
+  <header>
+    <div id="overlay">
+      <h1 id="text">Success Stories</h1>
+    </div>
+    <div id="img" class="img-fluid"></div>
+  </header>
+
+  <body>
+    <section id="sec-1">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="row pt-3 pb-3">
+            <div class="col-sm-12 col-md-9">
+              <h3 class="text-right">
+                It’s like Sweet Frog for beer,” Said Derek Cha, founder of Sweet Frog frozen yogurt in Short Pump in
+                2009, referring to iSuds
+              </h3>
+              <p class="reference text-right font-italic text-dark">Featured in Style Weekly and the Richmond Times DIspatch</p>
+            </div>
+            <div class="col-sm-12 col-md-3 text-center">
+              <img src="../../assets/img/blog.svg" alt="news" height="100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-2">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="row pt-3 pb-3">
+            <div class="col-sm-12 col-md-3 text-center">
+              <img src="../../assets/img/comment.svg" alt="comment" height="120">
+            </div>
+            <div class="col-sm-12 col-md-9">
+              <h5 class="text-left">
+                One of the best parts of our pour-yourself beer system is the opportunity for you to sample something
+                new, without having to go for an entire pint," says Brian Sullivan, manager at Thirsty Joe's Draft
+                House in Carytown, formerly RVA Draft Room. With rotating taps of beer, wine and cider, no visit is
+                like the one before.
+                <br />
+                <br />
+                At most bars, you have only the name and tap handle design available to help you choose your next
+                beverage," Sullivan points out. In many cases, the software also can be programmed to limit how much
+                can be poured to ensure no one is overserved. These numbers even get kicked back to businesses so they
+                can track their inventory, so it's a win-win
+              </h5>
+              <p class="reference text-left font-italic text-dark">Thirsty Joe's Draft House in Richmond VA is all the rage</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <app-bottom></app-bottom>
+  </footer>
+</div>
