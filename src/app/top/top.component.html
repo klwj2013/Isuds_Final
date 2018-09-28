@@ -41,11 +41,11 @@
 
       <form>
         <mat-form-field>
-          <input type="text" placeholder="Search" aria-label="Number" matInput [formControl]="myControl"
+          <input type="text" placeholder="Search" aria-label="Search" matInput [formControl]="myControl"
             [matAutocomplete]="auto">
           <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{option}}
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+              <a [routerLink]="option.link">{{option.name}}</a>
             </mat-option>
           </mat-autocomplete>
         </mat-form-field>

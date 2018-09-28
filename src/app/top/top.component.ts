@@ -3,24 +3,32 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
+export interface Option {
+  name: string;
+  link: string;
+}
+
 @Component({
   selector: 'app-top',
   templateUrl: './top.component.html',
   styleUrls: ['./top.component.css']
 })
+
 export class TopComponent implements OnInit {
   routes: any[];
   constructor() { }
 
   myControl = new FormControl();
-  options: string[] = [
-    'Why us?', 'How much it cost?', 'Gallery', 'Example with "H"'
+  options: Option[] = [
+    { name: 'Why us?', link: '/isuds' }, 
+    { name: 'How much it cost?', link: '/pricing' }, 
+    { name: 'Some questions', link: '/faq' }
   ];
-  filteredOptions: Observable<string[]>;
+  filteredOptions: Observable<Option[]>;
 
-  private _filter(value: string): string[] {
+  private _filter(value: string): Option[] {
     const filterValue = value.toLowerCase();
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    return this.options.filter(option => option.name.toLowerCase().includes(filterValue));
   }
 
   ngOnInit() {
@@ -40,9 +48,6 @@ export class TopComponent implements OnInit {
     ];
 
     this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(value => this._filter(value))
-      );
+      .pipe(startWith(''), map(value => this._filter(value)));
   }
 }
